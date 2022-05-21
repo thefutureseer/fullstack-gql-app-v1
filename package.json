@@ -1,7 +1,7 @@
 {
   "name": "pinky-prom",
   "version": "1.0.0",
-  "description": "",
+  "description": "##Clone, install and npm run develop",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server",
