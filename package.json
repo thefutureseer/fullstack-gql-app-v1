@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server",
+    "start": "nodemon server",
     "client": "npm start --prefix client",
-    "develop": "concurrently \"npm run server\" \"cd client && npm run start\"",
+    "develop": "concurrently \"npm run start\" \"cd client && npm run start\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
   },
   "engines": {
