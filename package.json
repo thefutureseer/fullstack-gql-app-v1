@@ -7,7 +7,7 @@
     "start": "nodemon server",
     "client": "npm start --prefix client",
     "develop": "concurrently \"npm run start\" \"cd client && npm run start\"",
-    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
   },
   "engines": {
     "npm": "8.3.0",
