@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon server",
     "client": "npm start --prefix client",
-    "develop": "concurrently \"npm run start\" \"cd client && npm run start\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
   },
   "engines": {
@@ -19,13 +18,13 @@
   "dependencies": {
     "apollo-server-express": "^2.19.0",
     "concurrently": "^7.1.0",
+    "debug": "^4.3.4",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "graphql": "^15.5.1",
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git"
