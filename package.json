@@ -18,7 +18,6 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^2.19.0",
-    "concurrently": "^7.1.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "graphql": "^15.5.1",
@@ -28,7 +27,8 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git"
+    "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git",
+    "concurrently": "^7.1.0"
   },
   "bugs": {
     "url": "https://github.com/thefutureseer/fullstack-gql-app-v1/issues"
