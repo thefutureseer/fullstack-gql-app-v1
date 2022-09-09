@@ -1,0 +1,70 @@
+body{
+  background-color: gray;
+  }
+
+header {
+  text-align: center;
+  margin: 7px;
+}
+
+.form {
+ padding:130px;
+
+}
+  
+.box {
+  margin-top: 10px;
+  padding:30px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+  }
+
+.msg-div {
+  margin-bottom: -10px;
+}
+
+.delete-btn {
+  height: 2.5em;
+  border: black solid 3px;
+  font-size: 23px;
+  margin-right: 14px;
+}
+
+#edit-btn {
+  height: 67px;
+  border: black solid 3px;
+  font-size: 23px;
+  margin-right: 14px;
+}
+
+span {
+  display: block;
+  border: solid 3px #000000;
+  padding: 7px;
+  background-color: bisque;
+}
+
+.prom {
+  display: flex;
+  border: solid #000000 2px;
+  padding: 16px;
+  padding-bottom: 21px;
+  overflow-y: scroll;
+  resize: none; 
+}
+
+.prom-div {
+  margin: 4px;
+  border: solid 2px black;
+}
+
+.secret {
+  color: #f00;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
