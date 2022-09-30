@@ -1,26 +1,12 @@
 {
   "name": "pinky-prom",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "dev": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "apollo-server-express": "^2.19.0",
-=======
-  "description": "##Clone, install and npm run develop",
-  "main": "server.js",
-  "scripts": {
-    "start": "nodemon server",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && npm run build --prefix client"
+    "develop": "concurrently \"npm run server\" \"cd client && npm run start\""
   },
   "engines": {
     "npm": "8.3.0",
@@ -31,29 +17,20 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-express": "^2.19.0",
-<<<<<<< HEAD
     "concurrently": "^7.1.0",
-    "debug": "^4.3.4",
-=======
->>>>>>> 51dc67bde6a9ceb06163521c75873311fabd8acb
->>>>>>> efcb389c3cf65a675bab093dac66b60498085f04
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "graphql": "^15.5.1",
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.15"
-<<<<<<< HEAD
-  }
-=======
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git",
-    "concurrently": "^7.1.0"
+    "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git"
   },
   "bugs": {
     "url": "https://github.com/thefutureseer/fullstack-gql-app-v1/issues"
   },
   "homepage": "https://github.com/thefutureseer/fullstack-gql-app-v1#readme"
->>>>>>> efcb389c3cf65a675bab093dac66b60498085f04
 }

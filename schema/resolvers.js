@@ -1,31 +1,10 @@
-<<<<<<< HEAD
-=======
 const { findOneAndUpdate } = require('../models/Book');
->>>>>>> efcb389c3cf65a675bab093dac66b60498085f04
 const books = require('../models/Book')
 
 //tell apollo how to fetch the data by defining a resolver
 const resolvers = {
   Query: {
     books: () => books, 
-<<<<<<< HEAD
-    
-    getAllBooks: async () => {
-      return await books.find();
-    }
-  }, 
-  
-  Mutation: {
-    createPost: async (root, args, content, info) => {
-      const {title, author} = args.books;
-      console.log("this is title: ", title, author);
-      const post = new books({title, author});
-      await post.save()
-      // .then(result=>console.log(result) return {...post._doc})
-      //.catch(err=>console.log(err) throw err);
-      return post;
-    }
-=======
     getAllBooks: async () => {
       return await books.find();
     },
@@ -63,7 +42,6 @@ const resolvers = {
     }
 
 
->>>>>>> efcb389c3cf65a675bab093dac66b60498085f04
   }
 };
 

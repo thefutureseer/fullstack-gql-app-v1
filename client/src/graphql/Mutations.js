@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-// import { gql } from "@apollo/client";
-// export const POST_BOOKS = gql`
-//  {
-//   mutation {
-//     createPost(books:{title: "title", author:"author"}) {
-//      title 	 
-//      author
-//      prom
-//     }
-//    }
-//  }
-//  `
-=======
 import { gql } from "@apollo/client";
 
 export const POST_BOOKS = gql`
@@ -44,4 +30,3 @@ export const UPDATE_ONE_POST = gql`
       }
     }`
 
->>>>>>> efcb389c3cf65a675bab093dac66b60498085f04

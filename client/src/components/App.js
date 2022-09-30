@@ -1,15 +1,12 @@
 import React  from 'react';
 import '../style/App.css';
-import Message from './message';
-import Form from './form';
+import Message from './Message';
+import Form from './Form';
 
 
 function App() {
 return (
 <div id='double-wide'>
-{/* <a class="skip-to-content-link" href="#skipTo">
-  Skip to content
-</a> */}
   <header>List of secrets</header>
   <Form />
   <Message />
