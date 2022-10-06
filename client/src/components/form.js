@@ -65,7 +65,7 @@ export default function Form() {
         <label >Sincere message</label>
         <p className="sin-msg m-2 text-danger">We'll never share your secret with anyone else.</p>
       </div>
-      
+
       <div className="form-check">
         <input type="checkbox" className="form-check-input" />
         <label className="form-check-label">Check me out</label>
