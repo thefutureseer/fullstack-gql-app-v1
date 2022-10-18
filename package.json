@@ -24,7 +24,6 @@
     "mongoose": "^6.2.2",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thefutureseer/fullstack-gql-app-v1.git"

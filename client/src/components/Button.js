@@ -1,32 +1,49 @@
-import React from 'react';
-import { DELETE_POST } from '../graphql/Mutations';
-import {useMutation} from '@apollo/client';
+import React from "react";
 
-// import { v4 as uuidv4 } from 'uuid';
+import classnames from "classnames";
+import PropTypes from "prop-types";
 
+const noop = () => {};
 
-export default function Button({book}) {
+const Button = ({
+  type = "button",
+  buttonText,
+  onClick = noop,
+  loading,
+  className = "",
+}) => {
+  const handleClick = e => {
+    if (!loading) return onClick(e);
 
-  //delete a secret div
-  const [deleteMuta] = useMutation(DELETE_POST);
-  
-  const clickHandler = (_id) => {  
-    //  if (deleting) return;
-    
-    deleteMuta({
-     variables: {_id},
-     update(cache) {
-       const normalizeId = cache.identify({_id, __type: 'Book'});
-       //using evict to DELETE
-       cache.evict({_id: normalizeId});
-       cache.gc();
-     }
-   });
-  }
+    return null;
+  };
 
   return (
-    <div>
-     <button onClick={(e)=>{e.preventDefault(); clickHandler(book._id)}} className='prom-div delete-btn'>Delete</button>
+    <div className="mt-6">
+      <button
+        type={type}
+        onClick={handleClick}
+        disabled={loading}
+        className={classnames(
+          [className],
+          "relative flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-black transition duration-150 ease-in-out  border border-transparent rounded-md group hover:bg-opacity-90 focus:outline-none",
+          {
+            "bg-bb-purple": !loading,
+            "bg-bb-gray-700": loading,
+            "cursor-wait": loading,
+          }
+        )}
+      >
+        {loading ? "Loading..." : buttonText}
+      </button>
     </div>
-  )
+  );
 };
+
+Button.propTypes = {
+  type: PropTypes.string,
+  buttonText: PropTypes.string,
+  loading: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+export default Button;

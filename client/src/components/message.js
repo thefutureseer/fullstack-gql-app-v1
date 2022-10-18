@@ -1,27 +1,29 @@
 import React from 'react';
 import {GET_BOOKS} from '../graphql/Query'; 
-// import { DELETE_POST } from '../graphql/Mutations';
+import { DELETE_POST } from '../graphql/Mutations';
 import {useQuery} from '@apollo/client';
+import {useMutation} from '@apollo/client';
+
 
 import EditModal from './Modal';
 import Button from './Button';
 
 export default function Message() {
-  // const [deleteMuta] = useMutation(DELETE_POST);
+  const [deleteMuta] = useMutation(DELETE_POST);
 
-  // const clickHandler = (_id) => {  
-  //   //  if (deleting) return;
+  const handleClick = (_id) => {  
+    //  if (deleting) return;
 
-  //   deleteMuta({
-  //    variables: {_id},
-  //    update(cache) {
-  //      const normalizeId = cache.identify({_id, __type: 'Book'});
-  //      //using evict to DELETE
-  //      cache.evict({_id: normalizeId});
-  //      cache.gc();
-  //    }
-  //  });
-  // }
+    deleteMuta({
+     variables: {_id},
+     update(cache) {
+       const normalizeId = cache.identify({_id, __type: 'Book'});
+       //using evict to DELETE
+       cache.evict({_id: normalizeId});
+       cache.gc();
+     }
+   });
+  }
 
   const {loading, error, data} = useQuery(GET_BOOKS);
 
@@ -33,13 +35,11 @@ export default function Message() {
      <p> Begin special list here: </p>
 
      {
-      // 'data?.'
       data.getAllBooks.map(book=>(
        <div className='msg-div' key={book._id}>
          <h1 className='prom'>
            <EditModal className='prom-div' id={book._id}/>
-           {/* <button onClick={(e)=>{e.preventDefault(); clickHandler(book._id)}} className='prom-div delete-btn'>Delete</button> */}
-           <Button secret={book} />
+           <Button onClick={(e)=>{e.preventDefault(); handleClick(book._id)}} buttonText="delete"/>
            <div className='prom-div'>
               <div>
                 <p>prom</p> 
