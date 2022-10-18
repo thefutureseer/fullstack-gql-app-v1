@@ -1,0 +1,74 @@
+// import React from 'react';
+// import { GET_BOOKS } from '../graphql/Query';
+// import { DELETE_POST } from '../graphql/Mutations';
+// import {useMutation} from '@apollo/client';
+
+// // import { v4 as uuidv4 } from 'uuid';
+
+// export default function Button(secret) {
+// console.log("secret=id",secret);
+//   //delete a secret div
+//   const [deleteMuta, {loading: deleting, error:deleteError}] = useMutation(DELETE_POST);
+
+//   if (deleting) return "loading..";
+//   if (deleteError) return `submission error ` 
+
+//   const clickHandler = (_id) => {  
+//     //  if (deleting) return;
+//     //update cache
+//     // if (isPublic) return null;
+    
+//     const updateCache = (client) => {
+//       console.log("this is client: ", client);
+//       const data = client.readQuery({
+//         query: GET_BOOKS,
+//         variables: {
+//           // isPublic,
+//         }
+//       });
+//       console.log("_id: ", _id)
+//       const newData = {
+//         book: data.book.filter((t) => t.id !== _id.id)
+//       }
+//       client.writeQuery({
+//         query: GET_BOOKS,
+//         variables: {
+//           // isPublic,
+//         },
+//         data: newData
+//       });
+//     }
+    
+//     //remove._id    
+//     const remove = () => {
+//       if (deleting) return;
+//       deleteMuta({
+//         variables: { _id},
+//         update: updateCache
+//       });
+
+//     };
+    
+//     remove();
+//   }    
+//     //   deleteMuta({
+//       //     variables: {_id},
+//       //     update(cache) {
+//         //      console.log("inside cache update function _id=id: ", _id);
+//         //      const normalizeId = cache.identify({_id, __type: 'Book'});
+//         //      //using evict to DELETE
+//         //      cache.evict({_id: normalizeId});
+//         //      cache.gc();
+//   //    }
+//   //  });
+   
+
+// //seperate out update cache and remove._id
+
+
+//   return (
+//     <div>
+//      <button onClick={(e)=>{e.preventDefault(); clickHandler(secret)}} className='prom-div delete-btn'>Delete</button>
+//     </div>
+//   )
+// };
