@@ -2,12 +2,7 @@ import React from 'react';
 import {GET_BOOKS} from '../graphql/Query'; 
 import { DELETE_POST } from '../graphql/Mutations';
 import {useQuery} from '@apollo/client';
-<<<<<<< HEAD
-import {useMutation} from '@apollo/client';
-
-=======
 import { useMutation } from '@apollo/client';
->>>>>>> 7151b31ba7e8aa3f4c2974aa26ac7ef12e1d40a4
 
 import EditModal from './Modal';
 // import Button from './Button';
@@ -15,11 +10,7 @@ import EditModal from './Modal';
 export default function Message() {
   const [deleteMuta] = useMutation(DELETE_POST);
 
-<<<<<<< HEAD
-  const handleClick = (_id) => {  
-=======
   const clickHandler = (_id) => {  
->>>>>>> 7151b31ba7e8aa3f4c2974aa26ac7ef12e1d40a4
     //  if (deleting) return;
 
     deleteMuta({
@@ -47,12 +38,8 @@ export default function Message() {
        <div className='msg-div' key={book._id}>
          <h1 className='prom'>
            <EditModal className='prom-div' id={book._id}/>
-<<<<<<< HEAD
-           <Button onClick={(e)=>{e.preventDefault(); handleClick(book._id)}} buttonText="delete"/>
-=======
            <button onClick={(e)=>{e.preventDefault(); clickHandler(book._id)}} className='prom-div delete-btn'>Delete</button>
            {/* <Button id={book._id} /> */}
->>>>>>> 7151b31ba7e8aa3f4c2974aa26ac7ef12e1d40a4
            <div className='prom-div'>
               <div>
                 <p>prom</p>
