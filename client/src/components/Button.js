@@ -10,7 +10,7 @@ const Button = ({
   buttonText,
   onClick = noop,
   loading,
-  className = "",
+  className = '',
 }) => {
   const handleClick = e => {
     if (!loading) return onClick(e);
@@ -26,7 +26,7 @@ const Button = ({
         disabled={loading}
         className={classnames(
           [className],
-          "relative flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-black transition duration-150 ease-in-out  border border-transparent rounded-md group hover:bg-opacity-90 focus:outline-none",
+          "relative flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out  border border-transparent rounded-md group hover:bg-opacity-90 focus:outline-none",
           {
             "bg-bb-purple": !loading,
             "bg-bb-gray-700": loading,

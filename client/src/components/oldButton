@@ -1,3 +1,6 @@
+
+//NOTE button class name "prom-div delete-btn"
+
 // import React from 'react';
 // import { GET_BOOKS } from '../graphql/Query';
 // import { DELETE_POST } from '../graphql/Mutations';
