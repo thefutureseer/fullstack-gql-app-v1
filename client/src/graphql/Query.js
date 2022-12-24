@@ -1,3 +1,5 @@
+//only exactly what we want, 
+//in these queries shape/name everything possible to get
 import { gql } from '@apollo/client';
 export const GET_BOOKS = gql`
   query {
