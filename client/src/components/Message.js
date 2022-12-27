@@ -5,7 +5,7 @@ import {useQuery} from '@apollo/client';
 import { useMutation } from '@apollo/client';
 
 import EditModal from './Modal';
-import Button from './Button.js';
+ import Button from './Button.js';
 
 export default function Message() {
   const [deleteMuta] = useMutation(DELETE_POST);
@@ -38,7 +38,7 @@ export default function Message() {
        <div className='msg-div' key={book._id}>
          <h1 className='prom'>
            <EditModal className='prom-div' id={book._id}/>
-           <Button onClick={(e)=>{e.preventDefault(); clickHandler(book._id)}} >Delete</Button>
+           <Button onClick={(e)=>{e.preventDefault(); clickHandler(book._id)}} buttonText="Delete"/>
            <div className='prom-div'>
               <div>
                 <p>prom</p>

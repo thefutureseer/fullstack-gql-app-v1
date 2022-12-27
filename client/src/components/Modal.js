@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import React from 'react';
+import Button from './Button';
 import Modal from 'react-modal';
 import { UPDATE_ONE_POST } from '../graphql/Mutations';
 
@@ -53,7 +54,7 @@ export default function EditModal(prop) {
 
   return (
     <div>
-      <button id='edit-btn' onClick={openModal}>Edit</button>
+      <Button onClick={openModal} buttonText="Edit" />
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
