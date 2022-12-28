@@ -2,7 +2,13 @@ body{
   background-color: gray;
   }
 
-header {
+ header {
+  text-align: center;
+  margin: 7px;
+}
+
+.log-btn {
+  /* visibility:unset; */
   text-align: center;
   margin: 7px;
 }

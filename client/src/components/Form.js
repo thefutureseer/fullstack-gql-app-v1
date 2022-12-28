@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { POST_BOOKS } from '../graphql/Mutations';
 import { useMutation } from '@apollo/client';
 import { v4 as uuidv4 } from 'uuid';
+import Message from './Message';
 
 export default function Form() {
   const _id = uuidv4();
@@ -72,6 +73,7 @@ export default function Form() {
       </div>
       <button type='submit' className="btn btn-primary" >Submit</button>
     </form>
+    <Message/>
    </div> 
   )
 }
