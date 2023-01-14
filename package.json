@@ -7,7 +7,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "develop": "concurrently \"npm run server\" \"cd client && npm run start\"",
-    "build:ui": "build --prod omit=develop/"
+    "build:ui": "npm run build --prod omit=develop/"
   },
   "engines": {
     "npm": "8.3.0",
