@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "build": "rm -rf build && cd ./client && npm run build && cp -r build ../"
+    "develop": "concurrently \"npm run server\" \"cd client && npm run start\"",
+    "build:ui": "rm -rf build && cd ./client && npm run build --prod && cp -r build ../"
   },
   "engines": {
     "npm": "8.3.0",
@@ -31,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/thefutureseer/fullstack-gql-app-v1/issues"
   },
-  "homepage": "https://github.com/thefutureseer/fullstack-gql-app-v1"
+  "homepage": "https://github.com/thefutureseer/fullstack-gql-app-v1#readme"
 }

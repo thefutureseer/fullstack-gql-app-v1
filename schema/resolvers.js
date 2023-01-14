@@ -1,4 +1,4 @@
-const { findOneAndUpdate } = require('../models/Book');
+// const { findOneAndUpdate } = require('../models/Book');
 const books = require('../models/Book')
 
 //tell apollo how to fetch the data by defining a resolver
