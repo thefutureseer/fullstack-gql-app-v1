@@ -6,8 +6,7 @@
   "scripts": {
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "both-dev": "concurrently \"npm run server\" \"cd client && npm run start\"",
-    "build": "NPM_CONFIG_PRODUCTION=false npm run build"
+    "both-dev": "concurrently \"npm run server\" \"cd client && npm run start\""
   },
   "engines": {
     "npm": "8.3.0",
