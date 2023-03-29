@@ -55,7 +55,7 @@ export default function Message() {
 
            <div className='prom-div'>
             <div>
-              <p>author</p> 
+              <p>name</p> 
               <span>{book.title}</span>
             </div>
            </div> 

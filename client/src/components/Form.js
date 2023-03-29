@@ -42,13 +42,13 @@ export default function Form() {
    <div>
     <form onSubmit={submitHandler} className='form container box'>
       <div >
-        <label>names</label>
-        <input  onChange={changeHandler} name="author" value={stateProm.author} className="form-control" placeholder="names"/>
+        <label>note</label>
+        <input  onChange={changeHandler} name="author" value={stateProm.author} className="form-control" placeholder="note"/>
       </div>
 
       <div >
-        <label>note</label>
-        <input  onChange={changeHandler} name="title" value={stateProm.title} className="form-control" placeholder="note"/>
+        <label>name</label>
+        <input  onChange={changeHandler} name="title" value={stateProm.title} className="form-control" placeholder="name"/>
       </div>
 
       {/* <div >
