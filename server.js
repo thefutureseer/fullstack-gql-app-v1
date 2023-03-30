@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 });
 
 //HEALTH CHECK
-app.get("/hello", (_, res) => {
+app.get('/hello', (_, res) => {
   res.send('Hello from above');
 })
 
