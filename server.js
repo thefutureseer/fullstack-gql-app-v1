@@ -43,6 +43,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
 });
 
+//HEALTH CHECK
+app.get("/hello", (_, res) => {
+  res.send('Hello from above');
+})
+
 //open up database
 db.once('open', () => {
   //give the server a port to listen on
