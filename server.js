@@ -31,13 +31,13 @@ app.use(express.json());
 
 // if we're in production, serve client/build as static assets
 //serve static assets if in production
-if(process.env.NODE_ENV === 'production') {
-//set static folder
- app.use(express.static('client/build'));
- app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
- });
-} 
+// if(process.env.NODE_ENV === 'production') {
+// //set static folder
+//  app.use(express.static('client/build'));
+//  app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//  });
+// } 
 //new version only set up environment for render.com
 //old version serve index.html from client side build
 app.get('/', (req, res) => {
