@@ -38,7 +38,8 @@ if(process.env.NODE_ENV === 'production') {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
  });
 } 
-//set up environment on / serve index.html from client side
+//new version only set up environment for render.com
+//old version serve index.html from client side build
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'server.js'));
 });
