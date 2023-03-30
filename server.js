@@ -38,11 +38,10 @@ app.use(express.json());
 //   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 //  });
 // } 
-//new version only set up environment for render.com
-//old version serve index.html from client side build
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'server.js'));
-});
+// //set up environment on / serve index.html from client side
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+// });
 
 //HEALTH CHECK
 app.get('/hello', (_, res) => {
