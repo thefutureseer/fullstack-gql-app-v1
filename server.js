@@ -11,7 +11,7 @@ require('dotenv').config();
 //bring in the database
 const db = require('./config/connection');
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 10000;
 
 //get express running
 const app = express();
@@ -40,7 +40,7 @@ if(process.env.NODE_ENV === 'production') {
 } 
 // //set up environment on / serve index.html from client side
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, './client/public', 'index.html'));
 });
 
 //HEALTH CHECK
