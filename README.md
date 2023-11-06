@@ -1,6 +1,9 @@
 
 # Confession App
 
+<img width="1440" alt="Screenshot 2023-11-05 at 9 26 46 PM" src="https://github.com/thefutureseer/fullstack-gql-app-v1/assets/30768475/f8df018c-b619-4204-aa20-67a598be5c37">
+
+
 ### MongoDB, Express-Apollo-GraphQL, React, Node
 
 ### Installation
