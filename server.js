@@ -44,16 +44,21 @@ app.get('/', (req, res) => {
 });
 
 //HEALTH CHECK
-app.get('/hello', (_, res) => {
-  res.send('Hello from above');
-})
+// app.get('/hello', (_, res) => {
+//   res.send('Hello from above');
+// })
 
 //open up database
 db.once('open', () => {
   //give the server a port to listen on
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
+    // console.log('Express server started on port %s at %s', app.address().port, app.address().address);
+
     //gql playground
-    // console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    });
   });
-});
+  // app.on('listening', function() {
+  //   console.log('Express server started on port %s at %s', app.address().port, app.address().address);
+  // });
