@@ -34,7 +34,7 @@ export default function Message() {
      <p> Begin special list here: </p>
 
      {
-      data.getAllBooks.map(book=>(
+      data?.getAllBooks.map(book=>(
        <div className='msg-div' key={book._id}>
          <h1 className='prom'>
            <EditModal className='prom-div' id={book._id}/>

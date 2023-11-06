@@ -8,7 +8,7 @@ export default function App() {
 
  return (
   <div id='double-wide'>
-    <header>List of secrets 
+    <header>List of confessions
      <LoginButton/>  
     </header>
     <Routes>
